@@ -23,4 +23,11 @@ class UserCardRegistrationFacade
      * @Type("string")
      */
     public $urlReturn;
+
+    /**
+     * @var string $urlCallback
+     * @SerializedName("UrlCallback")
+     * @Type("string")
+     */
+    public $urlCallback;
 }

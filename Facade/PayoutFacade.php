@@ -72,6 +72,20 @@ class PayoutFacade
     public $message;
 
     /**
+     * @var string $reference
+     * @SerializedName("Reference")
+     * @Type("string")
+     */
+    public $reference;
+
+    /**
+     * @var string $motif
+     * @SerializedName("Motif")
+     * @Type("string")
+     */
+    public $motif;
+
+    /**
      * @var ExtraParametersFacade $extraParameters
      * @SerializedName("ExtraParameters")
      * @Type("Smoney\Smoney\Facade\ExtraParametersFacade")
