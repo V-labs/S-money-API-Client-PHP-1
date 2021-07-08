@@ -20,4 +20,11 @@ class CompanyFacade
      * @Type("string")
      */
     public $siret;
+    
+    /**
+     * @var string $nafCode
+     * @SerializedName("NAFCode")
+     * @Type("string")
+     */
+    public $nafCode;
 }

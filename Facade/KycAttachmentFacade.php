@@ -6,9 +6,9 @@ use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 
 /**
- * Class VoucherCopyFacade
+ * Class KycFacade
  */
-class VoucherCopyFacade
+class KycAttachmentFacade
 {
     /**
      * @var int $id
@@ -25,25 +25,11 @@ class VoucherCopyFacade
     public $name;
 
     /**
-     * @var string $type
+     * @var int $type
      * @SerializedName("Type")
-     * @Type("string")
-     */
-    public $type;
-
-    /**
-     * @var int $size
-     * @SerializedName("Size")
      * @Type("integer")
      */
-    public $size;
-
-    /**
-     * @var string $href
-     * @SerializedName("Href")
-     * @Type("string")
-     */
-    public $href;
+    public $type;
 
     /**
      * @var string $contentType
@@ -53,7 +39,14 @@ class VoucherCopyFacade
     public $contentType;
 
     /**
-     * @var string $status
+     * @var integer $size
+     * @SerializedName("Size")
+     * @Type("integer")
+     */
+    public $size;
+
+    /**
+     * @var integer $status
      * @SerializedName("Status")
      * @Type("integer")
      */
@@ -67,23 +60,30 @@ class VoucherCopyFacade
     public $message;
 
     /**
-     * @var string $additionalStatus
+     * @var integer $additionalStatus
      * @SerializedName("AdditionalStatus")
      * @Type("integer")
      */
-    public $additionnalStatus;
+    public $additionalStatus;
 
     /**
-     * @var string $treatmentDate
+     * @var DateTime $treatmentDate
      * @SerializedName("TreatmentDate")
      * @Type("DateTime<'Y-m-d\TH:i:s+'>")
      */
     public $treatmentDate;
 
     /**
-     * @var string $receivedDate
+     * @var DateTime $receivedDate
      * @SerializedName("ReceivedDate")
      * @Type("DateTime<'Y-m-d\TH:i:s+'>")
      */
     public $receivedDate;
+
+    /**
+     * @var string $href
+     * @SerializedName("Href")
+     * @Type("href")
+     */
+    public $href;
 }
